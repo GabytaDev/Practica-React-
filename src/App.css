@@ -17,6 +17,9 @@
   align-items: center;
   justify-content: space-around;
 }
+.btn-acept{
+  cursor: pointer;
+}
 .modal-oculto{
   display: none;
 }
@@ -33,4 +36,16 @@
   justify-content: center;
   flex-direction: column;
 }
+.btn-close{
+  cursor: pointer;
+}
+.fa-window-close{
+  color: rgb(139, 136, 136);
+}
 
+.cerrar-modal{
+  display: none;
+}
+.modal-abierto{
+  display: block;
+}

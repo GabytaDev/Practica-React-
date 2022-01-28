@@ -6,6 +6,7 @@ const App = ()=>{
   const [textoUsuario, setTextoUsuario] = useState("")
   const [valorCheckbox, setValorCheckbox] = useState("NO")
   const [mostrarModal, setMostrarModal] = useState("modal-oculto")
+  const [cerrarModal, setCerrarModal] = useState("modal-abierto")
 
   const handleChangeTexto=(e)=>{
     setTextoUsuario(e.target.value)
@@ -21,8 +22,13 @@ const App = ()=>{
   
   const handleClick=()=>{
     setMostrarModal("modal")
+    
   }
 
+  const handleClickCerrar = ()=>{
+    setMostrarModal("modal-oculto")
+  }
+  
   return(
     <div className='content-general'>
       <div className='content-input'>
@@ -34,14 +40,13 @@ const App = ()=>{
         <input type="checkbox" name="agree" onChange={handleChangeCheckBox}></input>
         </div>
         <br></br>
-        <button onClick={handleClick}>Acepto</button>
+        <button onClick={handleClick} className='btn-acept'>Acepto</button>
 
         <div className={mostrarModal}>
+          <button className={cerrarModal} onClick={handleClickCerrar}>cerrar</button> 
           <p>Se registró con exito</p>
           <p>Sus datos: <span>{textoUsuario}</span> </p>
           <p>De acuerdo: <span>{valorCheckbox}</span></p>
-
-
         </div>
       </div>
     </div>
