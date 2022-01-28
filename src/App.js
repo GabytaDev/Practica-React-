@@ -20,11 +20,12 @@ const App = ()=>{
     }
   }
   
+  //abre modal
   const handleClick=()=>{
     setMostrarModal("modal")
     
   }
-
+  //cerrar modal
   const handleClickCerrar = ()=>{
     setMostrarModal("modal-oculto")
   }
@@ -41,7 +42,6 @@ const App = ()=>{
         </div>
         <br></br>
         <button onClick={handleClick} className='btn-acept'>Acepto</button>
-
         <div className={mostrarModal}>
           <button className={cerrarModal} onClick={handleClickCerrar}>cerrar</button> 
           <p>Se registró con exito</p>
