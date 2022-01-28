@@ -38,6 +38,10 @@ const App = ()=>{
 
         <div className={mostrarModal}>
           <p>Se registró con exito</p>
+          <p>Sus datos: <span>{textoUsuario}</span> </p>
+          <p>De acuerdo: <span>{valorCheckbox}</span></p>
+
+
         </div>
       </div>
     </div>
